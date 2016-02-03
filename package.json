@@ -1,14 +1,33 @@
+
 {
-  "name": "BasicAngularjsTemplate",
-  "version": "1.0.0",
-  "description": "very very basic templaate for angularjs",
-  "main": "index.html",
+  "name": "basicangularjstemplate",
+  "version": "0.0.0",
+  "description": "Play Fearless campaign.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "serve": "gulp serve",
+    "update": "bower update",
+    "build": "gulp build"
   },
-  "author": "anand",
-  "license": "ISC",
+  "repository": {
+
+    "type": "git",
+    "url": "http://ghe.bcbsnc.com/anandkrishnankutty/BasicAngularjsTemplate.git"
+  },
+  "keywords": [],/**/
+  "author": "",
+  "license": "UNLICENSED",
+  "engines": {
+
+    "node" : ">=0.12.2"
+  },
+  "dependencies": {
+
+  },
   "devDependencies": {
+
     "angular-ui-router": "^1.0.0-alpha0",
     "browser-sync": "^2.10.1",
     "gulp": "^3.9.0",
@@ -16,6 +35,5 @@
     "gulp-jshint": "^2.0.0",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0"
-  },
-  "dependencies": {}
+  }
 }

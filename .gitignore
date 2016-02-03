@@ -1,5 +1,4 @@
 node_modules
-docs
 .DS_Store
 .idea
-.idea/workspace.xml
+bower_components
