@@ -1,7 +1,7 @@
 describe('All calculator tests',function()
 {
     var $controller;
-    beforeEach(module('CalcApp'));
+    beforeEach(module('calcApp'));
     beforeEach(inject(function(_$controller_)
     {
         $controller=_$controller_;

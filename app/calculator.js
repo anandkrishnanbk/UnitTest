@@ -1,9 +1,7 @@
- angular.module('CalcApp',[]).controller('CalcController',calcCalculator);
-
- function calcCalculator($scope)
+ angular.module('calcApp',['prodApp']).controller('CalcController',CalcController);
+ CalcController.$inject=['$scope'];
+ function CalcController($scope)
  {
-     //vm=this;
-
      $scope.sum=function()
      {
          $scope.z=$scope.x+$scope.y;
@@ -11,5 +9,5 @@
  }
  angular.element(document).ready(function()
  {
-    angular.bootstrap(document,['CalcApp']);
+    angular.bootstrap(document,['calcApp']);
  });
