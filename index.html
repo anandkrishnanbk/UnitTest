@@ -4,12 +4,15 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div ng-app="App" ng-controller="myController">
-
+<div ng-controller="calcController as vm">
+<input type="number" ng-model="vm.x">
+<input type="number" ng-model="vm.y">
+<button type="button" class="btn btn-default" ng-click="vm.sum()">+</button>
+    {{vm.z}}
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="app.js"></script>
+<script src="calculator.js"></script>
 </body>
 </html>
