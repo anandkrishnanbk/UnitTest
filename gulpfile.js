@@ -32,6 +32,10 @@ gulp.task('jshint',function()
 {
     return gulp.src('*.js').pipe(jshint()).pipe(jshint.reporter('jshint-stylish'));
 });
+gulp.task('karma',function()
+{
+
+});
 gulp.task('serve',function()
 {
     browserSync.init(
@@ -41,7 +45,7 @@ gulp.task('serve',function()
             }
         });
 
-    gulp.watch('*.js',['jshint'],browserSync.reload);
+    gulp.watch('*.js',['jshint','karma'],browserSync.reload);
     gulp.watch('*.html',browserSync.reload);
     gulp.watch('*.css',browserSync.reload);
 });

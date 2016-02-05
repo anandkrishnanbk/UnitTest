@@ -1,8 +1,8 @@
 describe('All calculator tests',function()
 {
     var $controller;
-    beforeEach(module('calcApp'));
-    beforeEach($inject(function(_$controller_)
+    beforeEach(module('CalcApp'));
+    beforeEach(inject(function(_$controller_)
     {
         $controller=_$controller_;
     }));
@@ -10,11 +10,12 @@ describe('All calculator tests',function()
     var $controller;
     it('test sum of x and y',function()
     {
-        var controller = $controller('calcController',{$scope:$scope})
+        var $scope={};
+        var controller = $controller('CalcController',{$scope:$scope});
         $scope.x=10;
         $scope.y=12;
         $scope.sum();
-        except($scope.z).toBe(3);
+        expect($scope.z).toBe(22);
 
     });
 
