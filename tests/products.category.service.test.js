@@ -3,7 +3,7 @@ describe('Category service',function()
     var service;
     //Using the string alias form to register module
     beforeEach(module('prodApp.service'));
-    //Using the object form to register module
+
     beforeEach(inject(function getDependencies(categoryService)
     {
         service=categoryService;

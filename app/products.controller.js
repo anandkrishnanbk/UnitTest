@@ -2,8 +2,9 @@
  ProdController.$inject=['$scope','categoryService','productService'];
  function ProdController($scope,categoryService,productService)
  {
-  $scope.products =function() {
-   alert(JSON.stringify(productService.getProducts()));
+  $scope.load =function() {
+      $scope.products=productService.getProducts();
+   //alert(JSON.stringify(productService.getProducts()));
   }
 
  }

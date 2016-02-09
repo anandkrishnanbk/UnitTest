@@ -11,7 +11,12 @@
     {{z}}
 </div>
 <div ng-controller="ProdController">
-    <button type="button" class="btn btn-default" ng-click="products()">+</button>
+    <ul class="list-group">
+        <li ng-repeat="product in products" class="list-group-item">
+            {{product.categoryId}} {{product.name}} {{product.categoryName}}
+        </li>
+    </ul>
+    <button type="button" class="btn btn-default" ng-click="load()">+</button>
 </div>
 <script src="../node_modules/angular/angular.min.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
