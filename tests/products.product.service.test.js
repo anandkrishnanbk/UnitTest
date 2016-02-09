@@ -11,7 +11,7 @@ describe('Product Service - ',function()
     {
         var products=service.getProducts();
         expect(products[0].categoryName).toEqual('coffee1');
-        (products[1].categoryName).toEqual('coffee2');
+        expect(products[1].categoryName).toEqual('coffee2');
 
 
     });
