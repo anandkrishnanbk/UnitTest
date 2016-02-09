@@ -11,5 +11,4 @@ describe('All products tests',function()
         $provide.constant('discountPercent',0.10);
     };
     beforeEach(module(alias,obj,func))
-
 });
