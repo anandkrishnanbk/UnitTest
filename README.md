@@ -1,5 +1,5 @@
 # UnitTest
-Sample UnitTests
+Sample Unit Tests
 
 ###Run unit tests
 npm test
