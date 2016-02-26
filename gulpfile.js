@@ -1,6 +1,14 @@
 var gulp=require('gulp'),
-    jshint=require('gulp-jshint');
+    gutil=require('gulp-util'),
+    jshint=require('gulp-jshint'),
+    uglify=require('gulp-uglify'),
+    istanbul=require('gulp-istanbul'),
+    tap = require('gulp-tap'),
+    jasmine = require('gulp-jasmine'),
+    concat = require('gulp-concat');
+var Server = require('karma').Server;
 var browserSync=require('browser-sync').create();
+var _dirName = '/Users/anandkrishnankutty/GitProjects/UnitTest';
 /*var connect=require('gulp-connect');
 
  gulp.task('connect',function()
@@ -32,10 +40,45 @@ gulp.task('jshint',function()
 {
     return gulp.src('*.js').pipe(jshint()).pipe(jshint.reporter('jshint-stylish'));
 });
-gulp.task('karma',function()
-{
+gulp.task('test', function (done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
 
+    /*return gulp.src('.app/!*.js')
+        // Right there
+        .pipe(istanbul({includeUntested: true}))
+        .on('finish', function () {
+            gulp.src('./tests/!*.js')
+                .pipe(jasmine())
+                .pipe(istanbul.writeReports({
+                    dir: './assets/unit-test-coverage',
+                    reporters: [ 'lcov' ],
+                    reportOpts: { dir: './assets/unit-test-coverage'}
+                }));
+        });*/
+   /* return gulp.src(['app/!*.js'])
+        .pipe(istanbul())
+        .pipe(tap(function(f) {
+            // Make sure all files are loaded to get accurate coverage data
+            require(f.path);
+        }))
+        .on('end', function() {
+            gulp.src(src)
+                .pipe(jasmine())
+                .pipe(istanbul.writeReports({
+                    dir: './unit-test-coverage',
+                    reporters: [ 'lcov' ],
+                    reportOpts: { dir: './unit-test-coverage' }
+                }));
+        });*/
 });
+gulp.task('build-js',function()
+{
+    return gulp.src('app/**/*.js').pipe(concat('app.js')).pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()).pipe(gulp.dest('build'));
+
+})
 gulp.task('serve',function()
 {
     browserSync.init(
