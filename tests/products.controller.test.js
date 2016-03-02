@@ -37,8 +37,14 @@ describe('All products controller tests', function () {
             $controller = _$controller_;
         });
         var $scope={};
-        var controller = $controller('ProdController', {$scope: $scope});
-        $scope.load();
+        var bindings = {foo:'bar'};
+        //var controller = $controller('ProdController', {$scope: $scope});
+        var controller = $controller(function inlineController($scope,productService)
+        {
+            expect(this.data).toEqual(bindings);
+          $scope.products = productService.getProducts();
+        },{$scope: $scope},{data:bindings});
+       // $scope.load();
         expect($scope.products).toEqual([{categoryId: '1', name: 'Pizza', categoryName: 'Choco'}]);
     });
 

@@ -20,6 +20,7 @@ module.exports = function(config) {
         'node_modules/angular-mocks/angular-mocks.js',
         'app/products.controller.js',
         'app/calculator.controller.js',
+        'app/sample.controller.js',
         'app/products.product.service.js',
         'app/products.category.service.js',
         'tests/*.test.js'

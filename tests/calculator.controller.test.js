@@ -15,6 +15,8 @@ describe('All calculator tests',function()
         $scope.x=10;
         $scope.y=12;
         $scope.sum();
+        var prettier=angular.mock.dump($scope);
+        console.log(prettier);
         expect($scope.z).toBe(22);
 
     });
