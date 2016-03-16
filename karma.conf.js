@@ -12,7 +12,9 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
+     // plugins: [
+     //     'karma-ng-json2js-preprocessor'
+    //  ],
     // list of files / patterns to load in the browser
     files: [
 
@@ -23,7 +25,10 @@ module.exports = function(config) {
         'app/sample.controller.js',
         'app/products.product.service.js',
         'app/products.category.service.js',
+        'tests/*.json',
         'tests/*.test.js'
+        // fixtures
+       // {pattern: './tests/*.json', watched: true, served: true, included: false}
     ],
 
 
@@ -33,7 +38,9 @@ module.exports = function(config) {
     ],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: { 'app/*.js': ['coverage'] },
+    preprocessors: { 'app/*.js': ['coverage'],
+        //'**/*.html': ['ng-html2js'],
+        'tests/*.json': ['ng-json2js']},
 
 
     // test results reporter to use
@@ -45,7 +52,18 @@ module.exports = function(config) {
       type : 'html',
       dir : 'coverage/'
   },
+      ngJson2JsPreprocessor: {
+          // strip this from the file path
+          stripPrefix: 'tests/'
+          // prepend this to the
+          //prependPrefix: 'served/',
 
+          /* or define a custom transform function
+           cacheIdFromPath: function(filepath) {
+           return cacheId;
+           }
+           */
+      },
 
     // web server port
     port: 9876,

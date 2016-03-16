@@ -1,0 +1,15 @@
+{
+  "description": "Plans available within specific counties",
+
+  "2016": {
+    "blueAdvantage":            ["Alexander","Alleghany","Ashe","Avery","Beaufort","Bertie","Bladen","Brunswick","Buncombe","Burke","Caldwell","Camden","Carteret","Catawba","Cherokee","Chowan","Clay","Cleveland","Columbus","Craven","Cumberland","Currituck","Dare","Davidson","Davie","Duplin","Edgecombe","Northampton","Forsyth","Gaston","Gates","Graham","Granville","Greene","Guilford","Halifax","Harnett","Haywood","Henderson","Hertford","Hoke","Hyde","Iredell","Jackson","Jones","Lefalseir","Lincoln","Macon","Madison","Martin","McDowell","Mitchell","Montgomery","Moore","Nash","New Hafalsever","Onslow","Pamlico","Pasquotank","Pender","Perquimans","Pitt","Polk","Randolph","Richmond","Robeson","Rockingham","Rutherford","Sampson","Scotland","Stokes","Surry","Swain","Transylvania","Tyrrell","Vance","Warren","Washington","Watauga","Wayne","Wilkes","Wilson","Yadkin","Yancey"],
+
+    "blueSelect":               ["Alexander","Alleghany","Ashe","Avery","Beaufort","Bertie","Bladen","Brunswick","Buncombe","Burke","Caldwell","Camden","Carteret","Catawba","Cherokee","Chowan","Clay","Cleveland","Columbus","Craven","Cumberland","Currituck","Dare","Davidson","Davie","Duplin","Edgecombe","Forsyth","Gaston","Gates","Graham","Granville","Greene","Guilford","Halifax","Harnett","Haywood","Henderson","Hertford","Hoke","Hyde","Iredell","Jackson","Jones","Lefalseir","Lincoln","Macon","Madison","Martin","McDowell","Mitchell","Montgomery","Moore","Nash","New Hafalsever","Northampton","Onslow","Pamlico","Pasquotank","Pender","Perquimans","Pitt","Polk","Randolph","Richmond","Robeson","Rockingham","Rutherford","Sampson","Scotland","Stokes","Surry","Swain","Transylvania","Tyrrell","Vance","Warren","Washington","Watauga","Wayne","Wilkes","Wilson","Yadkin","Yancey"],
+
+    "blueValue":                ["Alamance","Alexander","Anson","Brunswick","Burke","Cabarrus","Caldwell","Caswell","Catawba","Chatham","Columbus","Davidson","Davie","Duplin","Durham","Forsyth","Franklin","Iredell","Johnston","Lee","Mecklenburg","New Hafalsever","Onslow","Orange","Pender","Person","Rowan","Stanly","Stokes","Surry","Union","Wake","Yadkin"],
+
+    "localCarolinasHealth":     ["Anson","Cabarrus","Cleveland","Gaston","Lincoln","Mecklenburg","Rowan","Stanly","Union"],
+
+    "localDukeWakeMed":         ["Caswell","Chatham","Durham","Johnston","Orange","Person","Wake"]
+  }
+}
